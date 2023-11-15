@@ -9,6 +9,7 @@ async fn main() -> Result<(), sea_orm::DbErr> {
     dotenv().ok();
     let db = db_connect().await?;
     println!("データベースに接続できたで！");
+    db.close().await?;
     Ok(())
 }
 
