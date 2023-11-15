@@ -7,3 +7,4 @@ edition = "2021"
 sea-orm = { version = "0.12", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros" ] }
 tokio = { version = "1", features = ["full"] }
 dotenv = "0.15"
+log = "0.4"
