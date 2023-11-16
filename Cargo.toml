@@ -3,7 +3,12 @@ name = "seaorm-1"
 version = "0.1.0"
 edition = "2021"
 
+[workspace]
+members = [".", "entity", "migration"]
+
 [dependencies]
+entity = {path = "entity"}
+migration = {path = "migration"}
 sea-orm = { version = "0.12", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros" ] }
 tokio = { version = "1", features = ["full"] }
 dotenv = "0.15"
